@@ -1,0 +1,17 @@
+/* fonts */
+/* bebas-neue-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+}
+/* sometype-mono-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Sometype Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/sometype-mono-v4-latin-regular.woff2") format("woff2");
+}
