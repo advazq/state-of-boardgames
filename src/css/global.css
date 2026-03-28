@@ -15,3 +15,63 @@
   font-weight: 400;
   src: url("../fonts/sometype-mono-v4-latin-regular.woff2") format("woff2");
 }
+
+:root {
+  --dark-blue: #25343f;
+  --clearer-blue: #a3d2df;
+  --orange: #ff9b51;
+  --dark-orange: #ea603e;
+  --green: #c6f0d5;
+  --grey: #bfc9d1;
+  --white: #eaefef;
+
+  --b-radius: 12px;
+  --global-margin: 1rem;
+
+  --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+}
+
+body {
+  background-color: var(--green);
+  background-image: radial-gradient(#bde4cb 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+}
+
+/* Section card type style */
+.main-card {
+  background-color: var(--white);
+  border-radius: var(--b-radius);
+  border: none;
+  margin: var(--global-margin);
+  padding: 1rem 2rem;
+  box-shadow: var(--b-shadow);
+}
+/* Header */
+.main-header {
+  grid-area: header;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Aside */
+aside {
+  grid-area: aside;
+}
+
+/* Main */
+main {
+  grid-area: main;
+}
+
+/* Footer */
+.main-footer {
+  grid-area: footer;
+}

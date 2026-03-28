@@ -3,25 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/global.css" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
     <title>State of BGs</title>
   </head>
   <body>
-    <header>
-      <menu>
-        <li><a></a></li>
-      </menu>
-      <h1><span></span></h1>
-      <button class="navigator next"></button>
+    <header class="main-header main-card">
+      <h1><span class="title">Title/Logo</span></h1>
+      <button class="navigator next">Next</button>
     </header>
+    <aside>
+      <nav class="navmenu main-card">
+        <menu>
+          <li class="navmenu-item"><a>Option 1</a></li>
+          <li class="navmenu-item"><a>Option 2</a></li>
+          <li class="navmenu-item"><a>Option 3</a></li>
+          <li class="navmenu-item"><a>Option 4</a></li>
+        </menu>
+      </nav>
+    </aside>
     <main>
       <section class="resume"></section>
-      <section class="bento">
-        <article class="bento-card"></article>
+      <section class="bento main-card">
+        <article class="bento-card">
+          <div class="card-container">
+            <header>
+              <h2><span>Card title</span></h2>
+            </header>
+            <div class="paragraph-container">
+              <p>Here goes a feature description</p>
+            </div>
+          </div>
+        </article>
       </section>
       <section class="about"></section>
+      <section class="FAQs"></section>
     </main>
-    <footer>
-      <div></div>
+    <footer class="main-footer">
+      <div class="main-card">
+        <ul>
+          <li><a>Example footer content</a></li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
