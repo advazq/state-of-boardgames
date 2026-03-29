@@ -5,7 +5,7 @@
   font-family: "Bebas Neue";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+  src: url("../assets/fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
 }
 /* sometype-mono-regular - latin */
 @font-face {
@@ -13,65 +13,72 @@
   font-family: "Sometype Mono";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/sometype-mono-v4-latin-regular.woff2") format("woff2");
+  src: url("../assets/fonts/sometype-mono-v4-latin-regular.woff2") format("woff2");
 }
 
 :root {
-  --dark-blue: #25343f;
-  --clearer-blue: #a3d2df;
+  --black: #121312;
   --orange: #ff9b51;
-  --dark-orange: #ea603e;
-  --green: #c6f0d5;
-  --grey: #bfc9d1;
-  --white: #eaefef;
+  --grey: #191818;
+  --white: #e8d8c4;
+  --yellow: #fcc714;
 
-  --b-radius: 12px;
-  --global-margin: 1rem;
+  --b-radius: 50px;
+  --global-margin: 2.5rem;
 
   --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
+  --border: 1px solid var(--white);
 }
 
 body {
-  background-color: var(--green);
-  background-image: radial-gradient(#bde4cb 2px, transparent 0);
-  background-size: 30px 30px;
-  background-position: -5px -5px;
+  background-color: var(--black);
+  color: var(--white);
+}
 
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "aside main main"
-    "footer footer footer";
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--global-margin) 0;
 }
 
 /* Section card type style */
 .main-card {
-  background-color: var(--white);
-  border-radius: var(--b-radius);
-  border: none;
-  margin: var(--global-margin);
-  padding: 1rem 2rem;
-  box-shadow: var(--b-shadow);
 }
 /* Header */
 .main-header {
-  grid-area: header;
+  font-family: "Sometype Mono", Helvetica, sans-serif;
+}
 
+.main-nav-menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  background-color: var(--grey);
+  border: var(--border);
+  border-radius: var(--b-radius);
+  padding: 1.5rem;
+
+  li a {
+    &:hover {
+      cursor: pointer;
+      color: var(--yellow);
+      text-decoration: underline;
+    }
+  }
 }
 
 /* Aside */
 aside {
-  grid-area: aside;
 }
 
 /* Main */
 main {
-  grid-area: main;
 }
 
 /* Footer */
 .main-footer {
-  grid-area: footer;
 }
