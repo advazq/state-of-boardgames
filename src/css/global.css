@@ -71,8 +71,17 @@ body {
   }
 }
 
-/* Aside */
-aside {
+/* Hero */
+.hero {
+  h1 {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+    font-size: 15rem;
+  }
+
+  p {
+    font-family: "Sometype Mono", Helvetica, sans-serif;
+    font-size: 2rem;
+  }
 }
 
 /* Main */
