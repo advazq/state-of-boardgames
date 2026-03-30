@@ -22,9 +22,10 @@
   --grey: #191818;
   --white: #e8d8c4;
   --yellow: #fcc714;
+  --green: #02c66d;
 
   --b-radius: 50px;
-  --global-margin: 2.5rem;
+  --global-margin: 5rem;
 
   --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
   --border: 1px solid var(--white);
@@ -40,7 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: var(--global-margin) 0;
+  margin: 1rem var(--global-margin);
 }
 
 /* Section card type style */
@@ -65,7 +66,7 @@ body {
   li a {
     &:hover {
       cursor: pointer;
-      color: var(--yellow);
+      color: var(--green);
       text-decoration: underline;
     }
   }
@@ -73,19 +74,96 @@ body {
 
 /* Hero */
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--global-margin);
+
+  hgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
   h1 {
     font-family: "Bebas Neue", Helvetica, sans-serif;
-    font-size: 15rem;
+    font-size: 14rem;
+    align-self: center;
   }
 
   p {
     font-family: "Sometype Mono", Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 2.15rem;
+    align-self: center;
   }
 }
 
 /* Main */
 main {
+}
+
+/* Bento */
+.feature {
+  margin: 0 var(--global-margin);
+  hgroup {
+    font-family: "Bebas Neue", Helvetica, sans-serif;
+
+    h2 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-family: "Sometype Mono", Helvetica, sans-serif;
+      font-size: 1rem;
+      margin: 0 0 2rem 0;
+    }
+  }
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+
+  .card-3 {
+    grid-column: 3 / 5;
+    grid-row: auto;
+  }
+
+  .card-4 {
+    grid-row: 2 / 4;
+  }
+
+  .card-5 {
+    grid-column: 2 / 4;
+  }
+
+  .card-7 {
+    grid-column: 2 / 4;
+  }
+}
+
+.bento-card {
+  border-radius: 10px;
+  background-color: var(--grey);
+  border-left: 6px solid var(--white);
+  border-bottom: 3px solid var(--white);
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    header span {
+      font-family: "Bebas Neue", Helvetica, sans-serif;
+    }
+
+    .paragraph-container p {
+      font-family: "Sometype Mono", Helvetica, sans-serif;
+    }
+  }
 }
 
 /* Footer */
