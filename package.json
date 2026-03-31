@@ -2,18 +2,19 @@
   "name": "state-of-boardgames",
   "version": "1.0.0",
   "description": "Template for an annual report for boardgames data",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Adrián Vázquez",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpx servor .  index.html 1234 --reload"
+    "dev": "pnpx servor .  index.html 1234 --reload",
+    "deploy": "gh-pages -d index.html"
   },
-  "keywords": [],
-  "author": "Adrián Vázquez",
-  "license": "ISC",
-  "packageManager": "pnpm@10.30.3",
   "devDependencies": {
     "gh-pages": "^6.3.0",
     "oxfmt": "^0.42.0",
     "oxlint": "^1.57.0",
     "servor": "^4.0.2"
-  }
+  },
+  "packageManager": "pnpm@10.30.3"
 }

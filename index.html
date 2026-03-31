@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/css/global.css" />
     <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/global.css" />
     <title>State of BGs</title>
   </head>
   <body>
@@ -13,7 +13,7 @@
         <nav class="main-nav">
           <menu class="main-nav-menu">
             <li>
-              <a>
+              <a class="home-link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -33,9 +33,9 @@
                 </svg>
               </a>
             </li>
-            <li><a>Sections</a></li>
-            <li><a>About</a></li>
-            <li><a>2025 report</a></li>
+            <li><a class="sections-link">Sections</a></li>
+            <li><a class="about-link">About</a></li>
+            <li><a class="report-link">2025 report</a></li>
           </menu>
         </nav>
       </header>
@@ -209,7 +209,6 @@
               Suspendisse ac metus orci. Proin euismod bibendum ante, at congue velit porta vitae.
               Nunc scelerisque commodo luctus. Sed venenatis, erat ut tristique tempor, massa.
             </p>
-            <img src="" alt="" />
           </article>
           <article class="about-card card-about-2">
             <h3><span>Title about card</span></h3>
@@ -219,7 +218,6 @@
               Suspendisse ac metus orci. Proin euismod bibendum ante, at congue velit porta vitae.
               Nunc scelerisque commodo luctus. Sed venenatis, erat ut tristique tempor, massa.
             </p>
-            <img src="" alt="" />
           </article>
           <article class="about-card card-about-3">
             <h3><span>Title about card</span></h3>
@@ -229,15 +227,25 @@
               Suspendisse ac metus orci. Proin euismod bibendum ante, at congue velit porta vitae.
               Nunc scelerisque commodo luctus. Sed venenatis, erat ut tristique tempor, massa.
             </p>
-            <img src="" alt="" />
           </article>
         </div>
       </section>
       <section class="FAQs"></section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer main-section">
       <div>
-        <span>Made with love by Adrián Vázquez</span>
+        <span
+          >Made with <?xml version="1.0" encoding="UTF-8"?><svg
+            id="heart-solid"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <polygon
+              points="23 6 23 11 22 11 22 12 21 12 21 13 20 13 20 14 19 14 19 15 18 15 18 16 17 16 17 17 16 17 16 18 15 18 15 19 14 19 14 20 13 20 13 21 11 21 11 20 10 20 10 19 9 19 9 18 8 18 8 17 7 17 7 16 6 16 6 15 5 15 5 14 4 14 4 13 3 13 3 12 2 12 2 11 1 11 1 6 2 6 2 5 3 5 3 4 4 4 4 3 10 3 10 4 11 4 11 5 13 5 13 4 14 4 14 3 20 3 20 4 21 4 21 5 22 5 22 6 23 6"
+            />
+          </svg>
+          by <a href="https://github.com/advazq" target="_blank">Adrián Vázquez</a></span
+        >
       </div>
     </footer>
   </body>

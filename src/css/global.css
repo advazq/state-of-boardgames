@@ -24,6 +24,7 @@
   --yellow: #fcc714;
   --green: #02c66d;
   --red: #ea3b64;
+  --blue: #00a0cc;
 
   --b-radius: 50px;
   --global-margin: 5rem;
@@ -45,12 +46,12 @@ body {
   margin: 1rem var(--global-margin);
 }
 
-/* Section card type style */
-.main-card {
-}
 /* Header */
 .main-header {
   font-family: "Sometype Mono", Helvetica, sans-serif;
+  position: sticky;
+  top: var(--global-margin);
+  margin: 2rem 0 0 0;
 }
 
 .main-nav-menu {
@@ -59,17 +60,33 @@ body {
   align-items: center;
   list-style: none;
   gap: 1.5rem;
-  background-color: var(--grey);
+  background-color: var(--white) / 60%;
   border: var(--border);
   border-radius: var(--b-radius);
-  padding: 1.5rem;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
 
-  li a {
-    &:hover {
-      cursor: pointer;
-      color: var(--green);
-      text-decoration: underline;
-    }
+  li a,
+  li a svg {
+    transition: color 250ms ease;
+  }
+
+  li a:hover {
+    cursor: pointer;
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .sections-link:hover {
+    color: var(--yellow);
+  }
+
+  .report-link:hover {
+    color: var(--red);
+  }
+
+  .home-icon:hover {
+    color: var(--blue);
   }
 }
 
@@ -90,12 +107,27 @@ body {
     font-family: "Bebas Neue", Helvetica, sans-serif;
     font-size: 14rem;
     align-self: center;
+    transition: color 0.3s ease;
   }
 
   p {
     font-family: "Sometype Mono", Helvetica, sans-serif;
     font-size: 2.15rem;
     align-self: center;
+  }
+}
+
+@keyframes move-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -147,6 +179,18 @@ body {
   border-left: 6px solid var(--white);
   border-bottom: 3px solid var(--white);
 
+  cursor: pointer;
+  transition:
+    border-left 300ms ease,
+    border-bottom 300ms ease,
+    scale 300ms ease;
+
+  &:hover {
+    border-left: 6px solid var(--yellow);
+    border-bottom: 3px solid var(--yellow);
+    transform: scale(1.025);
+  }
+
   .card-container {
     display: flex;
     flex-direction: column;
@@ -155,6 +199,7 @@ body {
 
     header span {
       font-family: "Bebas Neue", Helvetica, sans-serif;
+      font-size: 2.5rem;
     }
 
     .paragraph-container p {
@@ -206,5 +251,50 @@ body {
   }
 }
 /* Footer */
+
 .main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sometype Mono", Helvetica, sans-serif;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+    display: inline;
+    margin-inline: 10px;
+    fill: transparent;
+    stroke: var(--red);
+    transition: stroke 250ms;
+
+    &:hover {
+      fill: var(--red);
+      cursor: pointer;
+    }
+  }
+
+  a {
+    margin-inline: 5px;
+    cursor: pointer;
+
+    &:link {
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    &:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+  }
 }
