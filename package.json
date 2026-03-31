@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpx servor .  index.html 1234 --reload",
-    "deploy": "gh-pages -d index.html"
+    "deploy": "gh-pages -d ."
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
