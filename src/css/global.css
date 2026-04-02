@@ -31,6 +31,8 @@
 
   --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
   --border: 1px solid var(--white);
+
+  --foreground: 5;
 }
 
 body {
@@ -52,6 +54,7 @@ body {
   position: sticky;
   top: var(--global-margin);
   margin: 2rem 0 0 0;
+  z-index: var(--foreground);
 }
 
 .main-nav-menu {
@@ -188,6 +191,17 @@ body {
   &:hover {
     border-left: 6px solid var(--yellow);
     border-bottom: 3px solid var(--yellow);
+    transform: scale(1.025);
+  }
+
+  &:nth-child(2n):hover {
+    border-left: 6px solid var(--green);
+    border-bottom: 3px solid var(--green);
+    transform: scale(1.025);
+  }
+  &:nth-child(3n):hover {
+    border-left: 6px solid var(--red);
+    border-bottom: 3px solid var(--red);
     transform: scale(1.025);
   }
 
