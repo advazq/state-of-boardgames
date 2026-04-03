@@ -69,15 +69,24 @@ body {
   padding: 1rem;
   backdrop-filter: blur(10px);
 
-  li a,
-  li a svg {
-    transition: color 250ms ease;
-  }
-
-  li a:hover {
-    cursor: pointer;
-    color: var(--green);
+  li a {
     text-decoration: none;
+    transition: color 250ms ease;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    svg {
+      transition: color 250ms ease;
+    }
   }
 
   .sections-link:hover {
@@ -90,6 +99,10 @@ body {
 
   .home-icon:hover {
     color: var(--blue);
+  }
+
+  .about-link:hover {
+    color: var(--green);
   }
 }
 
