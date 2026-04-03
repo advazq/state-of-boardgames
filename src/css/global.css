@@ -31,6 +31,8 @@
 
   --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
   --border: 1px solid var(--white);
+
+  --foreground: 5;
 }
 
 body {
@@ -52,6 +54,7 @@ body {
   position: sticky;
   top: var(--global-margin);
   margin: 2rem 0 0 0;
+  z-index: var(--foreground);
 }
 
 .main-nav-menu {
@@ -105,14 +108,14 @@ body {
 
   h1 {
     font-family: "Bebas Neue", Helvetica, sans-serif;
-    font-size: 14rem;
+    font-size: clamp(5rem, 15vw, 14rem);
     align-self: center;
     transition: color 0.3s ease;
   }
 
   p {
     font-family: "Sometype Mono", Helvetica, sans-serif;
-    font-size: 2.15rem;
+    font-size: clamp(1.25rem, 3vw, 2.15rem);
     align-self: center;
   }
 }
@@ -138,12 +141,12 @@ body {
     font-family: "Bebas Neue", Helvetica, sans-serif;
 
     h2 {
-      font-size: 6rem;
+      font-size: clamp(3rem, 8vw, 6rem);
     }
 
     p {
       font-family: "Sometype Mono", Helvetica, sans-serif;
-      font-size: 1rem;
+      font-size: clamp(0.875rem, 2vw, 1rem);
       margin: 0 0 2rem 0;
     }
   }
@@ -191,6 +194,17 @@ body {
     transform: scale(1.025);
   }
 
+  &:nth-child(2n):hover {
+    border-left: 6px solid var(--green);
+    border-bottom: 3px solid var(--green);
+    transform: scale(1.025);
+  }
+  &:nth-child(3n):hover {
+    border-left: 6px solid var(--red);
+    border-bottom: 3px solid var(--red);
+    transform: scale(1.025);
+  }
+
   .card-container {
     display: flex;
     flex-direction: column;
@@ -199,7 +213,7 @@ body {
 
     header span {
       font-family: "Bebas Neue", Helvetica, sans-serif;
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
     }
 
     .paragraph-container p {
