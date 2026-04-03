@@ -2,18 +2,18 @@
 /* bebas-neue-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: "Bebas Neue";
+  font-family: 'Bebas Neue';
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/bebas-neue-v16-latin-regular.woff2") format("woff2");
+  src: url('../assets/fonts/bebas-neue-v16-latin-regular.woff2') format('woff2');
 }
 /* sometype-mono-regular - latin */
 @font-face {
   font-display: swap;
-  font-family: "Sometype Mono";
+  font-family: 'Sometype Mono';
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/sometype-mono-v4-latin-regular.woff2") format("woff2");
+  src: url('../assets/fonts/sometype-mono-v4-latin-regular.woff2') format('woff2');
 }
 
 :root {
@@ -25,19 +25,60 @@
   --green: #02c66d;
   --red: #ea3b64;
   --blue: #00a0cc;
-
+  
+  /* tamaños */
   --b-radius: 50px;
   --global-margin: 5rem;
+  --foreground: 5rem;
+  --separation: clamp(4rem, 8vw, 10rem);
 
+  /* Borders & Shadows */
   --b-shadow: 1.6px 3.2px 3.2px hsl(0deg 0% 0% / 0.45);
   --border: 1px solid var(--white);
 
-  --foreground: 5;
+  /* Fonts */
+  --font-main: 'Sometype Mono', Helvetica, sans-serif;
+  --font-header: 'Bebas Neue', Helvetica, sans-serif;
 }
 
 body {
   background-color: var(--black);
   color: var(--white);
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  margin-inline: clamp(1rem, 5vw, 80px);
+}
+@media (min-width: 1600px) {
+  body {
+    margin-inline: 150px;
+  }
+}
+
+p {
+  /* font-size: 0.7lh; */
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+  text-wrap: balance;
+}
+h1 {
+  font-size: clamp(2.5rem, 12vw, 14rem);
+  margin-bottom: var(--foreground);
+  text-align: center;
+}
+h2 {
+  font-size: clamp(2rem, 12vw, 6rem);
+}
+
+hgroup {
+  margin-top: var(--separation);
 }
 
 .main-wrapper {
@@ -45,15 +86,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem var(--global-margin);
 }
 
 /* Header */
 .main-header {
-  font-family: "Sometype Mono", Helvetica, sans-serif;
   position: sticky;
   top: var(--global-margin);
-  margin: 2rem 0 0 0;
+  margin: 2rem 0;
   z-index: var(--foreground);
 }
 
@@ -63,7 +102,7 @@ body {
   align-items: center;
   list-style: none;
   gap: 1.5rem;
-  background-color: var(--white) / 60%;
+  background-color: rgba(199, 198, 197, 0.2);
   border: var(--border);
   border-radius: var(--b-radius);
   padding: 1rem;
@@ -95,27 +134,13 @@ body {
 
 /* Hero */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: var(--global-margin);
-
-  hgroup {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-
   h1 {
-    font-family: "Bebas Neue", Helvetica, sans-serif;
-    font-size: 14rem;
     align-self: center;
     transition: color 0.3s ease;
   }
 
   p {
-    font-family: "Sometype Mono", Helvetica, sans-serif;
-    font-size: 2.15rem;
+    font-size: 1.45lh;
     align-self: center;
   }
 }
@@ -136,43 +161,49 @@ body {
 
 /* Bento */
 .main-section {
-  margin: var(--global-margin);
   hgroup {
-    font-family: "Bebas Neue", Helvetica, sans-serif;
-
-    h2 {
-      font-size: 6rem;
-    }
-
     p {
-      font-family: "Sometype Mono", Helvetica, sans-serif;
-      font-size: 1rem;
       margin: 0 0 2rem 0;
     }
   }
 }
-
 .bento {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+.bento > * {
+  grid-column: auto;
+  grid-row: auto;
+}
 
-  .card-3 {
-    grid-column: 3 / 5;
-    grid-row: auto;
+@media (min-width: 768px) {
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-  .card-4 {
-    grid-row: 2 / 4;
-  }
+@media (min-width: 1024px) {
+  .bento {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
-  .card-5 {
-    grid-column: 2 / 4;
-  }
+    .card-3 {
+      grid-column: 3 / 5;
+      grid-row: auto;
+    }
 
-  .card-7 {
-    grid-column: 2 / 4;
+    .card-4 {
+      grid-row: 2 / 4;
+    }
+
+    .card-5 {
+      grid-column: 2 / 4;
+    }
+
+    .card-7 {
+      grid-column: 2 / 4;
+    }
   }
 }
 
@@ -212,12 +243,7 @@ body {
     padding: 1rem;
 
     header span {
-      font-family: "Bebas Neue", Helvetica, sans-serif;
       font-size: 2.5rem;
-    }
-
-    .paragraph-container p {
-      font-family: "Sometype Mono", Helvetica, sans-serif;
     }
   }
 }
@@ -227,19 +253,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
-
-  h3 {
-    font-family: "Bebas Neue", Helvetica, sans-serif;
-  }
-
-  p {
-    font-family: "Sometype Mono", Helvetica, sans-serif;
-  }
 
   .about-card {
     border-radius: 10px;
-
     padding: 1rem;
   }
 
@@ -267,16 +283,11 @@ body {
 /* Footer */
 
 .main-footer {
+  margin: calc(var(--separation) * 2) 0 var(--separation);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-
-  span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Sometype Mono", Helvetica, sans-serif;
-  }
+  gap: 0.5rem;
 
   svg {
     width: 25px;
