@@ -108,15 +108,20 @@ hgroup {
   padding: 1rem;
   backdrop-filter: blur(10px);
 
-  li a,
-  li a svg {
-    transition: color 250ms ease;
-  }
-
-  li a:hover {
-    cursor: pointer;
-    color: var(--green);
+  li a {
     text-decoration: none;
+    transition: color 250ms ease;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: var(--white);
+    }
   }
 
   .sections-link:hover {
@@ -129,6 +134,10 @@ hgroup {
 
   .home-icon:hover {
     color: var(--blue);
+  }
+
+  .about-link:hover {
+    color: var(--green);
   }
 }
 
@@ -156,6 +165,30 @@ hgroup {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+.move-up-arrow-link {
+  position: fixed;
+  z-index: var(--foreground);
+  bottom: 2rem;
+  right: 2rem;
+  border: var(--border);
+  border-radius: var(--b-radius);
+  min-width: 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition:
+    border 250ms ease,
+    color 250ms ease;
+
+  &:visited {
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  &:hover {
+    color: var(--blue);
+    border: 1px solid var(--blue);
   }
 }
 

@@ -7,38 +7,33 @@
     <link rel="stylesheet" href="./src/css/global.css" />
     <title>State of BGs</title>
   </head>
-  <body>
+  <body id="top">
     <main class="main-wrapper">
       <header class="main-header">
         <nav class="main-nav">
           <menu class="main-nav-menu">
-            <li>
-              <a class="home-link">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="home-icon"
-                >
-                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-                  <path
-                    d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li><a class="sections-link">Sections</a></li>
-            <li><a class="about-link">About</a></li>
+            <li><a class="sections-link" href="#Sections">Sections</a></li>
+            <li><a class="about-link" href="#About">About</a></li>
             <li><a class="report-link">2025 report</a></li>
           </menu>
         </nav>
       </header>
+      <a class="move-up-arrow-link" href="#top"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="move-up-arrow"
+        >
+          <path d="M8 6L12 2L16 6" />
+          <path d="M12 2V22" /></svg
+      ></a>
       <section class="hero">
         <hgroup>
           <h1><span>State of</span> <span id="boardgames">Boardgames</span></h1>
@@ -52,7 +47,7 @@
       <section class="resume"></section>
       <section class="feature main-section">
         <hgroup>
-          <h2><span>Title of the feature section</span></h2>
+          <h2 id="Sections"><span>Title of the feature section</span></h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet ante eget
             tellus sollicitudin feugiat eu eu nisi. Etiam dignissim facilisis lobortis. Suspendisse
@@ -192,7 +187,7 @@
       </section>
       <section class="about main-section">
         <hgroup>
-          <h2><span>About</span></h2>
+          <h2 id="About"><span>About</span></h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim lorem ac nisl
             convallis bibendum. Aenean nec est erat. Nulla et pellentesque nisl, et rutrum dolor.
