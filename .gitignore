@@ -1,2 +1,29 @@
-node_modules
+# DOCUMENTACION
+# ===============================
+# --- Documentación pública → versionada
+#/docs/
+# --- Documentación privada / borradores → ignorar
+/_documentacion/
+_*
+
+
+# DEPENDENCIAS ignorar siempre
+# ===============================
+# --- Composer dependencies
+/vendor/
+# --- Node dependencies
+/node_modules/
+
+
+# EDITORES / IDE
+# ===============================
+.vscode/
+*.code-workspace
+
+
+# SISTEMA Y LOGS
+# ===============================
+/logs/
+*.log
 .DS_Store
+Thumbs.db
